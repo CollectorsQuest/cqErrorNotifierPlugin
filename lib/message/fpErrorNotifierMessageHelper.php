@@ -61,7 +61,10 @@ class fpErrorNotifierMessageHelper
   {
     return array(
       'server' => $this->dump($_SERVER),
-      'session' => $this->dump(isset($_SESSION) ? $_SESSION : null));
+      'session' => $this->dump(isset($_SESSION) ? $_SESSION : null),
+      'GET' => $this->dump($_GET),
+      'POST' => $this->dump($_POST),
+    );
   }
 
   /**
