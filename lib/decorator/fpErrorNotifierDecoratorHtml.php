@@ -58,8 +58,8 @@ class fpErrorNotifierDecoratorHtml extends fpBaseErrorNotifierDecorator
   protected function _renderRow($th, $td = '')
   {
     return "
-      <tr style=\"padding: 4px;spacing: 0;text-align: left;\">\n
-        <th style=\"background:#cccccc\" width=\"140px\">
+      <tr style=\"padding: 4px;spacing: 0;\">\n
+        <th style=\"background:#cccccc;padding-top: 13px;vertical-align:top\" width=\"140px\">
           {$this->notifier()->helper()->formatTitle($th)}:
         </th>\n
         <td style=\"padding: 4px;spacing: 0;text-align: left;background:#eeeeee\">
@@ -89,7 +89,7 @@ class fpErrorNotifierDecoratorHtml extends fpBaseErrorNotifierDecorator
    */
   protected function _prepareValue($value)
   {
-    $return = "<pre style='margin: 0px 0px 10px 0px; display: block; color: black; font-family: Verdana; border: 1px solid #cccccc; padding: 5px; font-size: 15px;'>";
+    $return = "<pre style='margin: 0; display: block; color: black; font-family: Verdana; border: 1px solid #cccccc; padding: 5px 5px 8px; font-size: 15px;'>";
     $return .= $this->notifier()->helper()->formatValue($value);
     $return .= '</pre>';
 
