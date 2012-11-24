@@ -167,7 +167,7 @@ class fpErrorNotifierHandler
 
     $this->freeMemory();
 
-    @$this->handleError($error['type'], $error['message'], $error['file'], $error['line']);
+    $this->handleError($error['type'], $error['message'], $error['file'], $error['line']);
   }
 
   /**
